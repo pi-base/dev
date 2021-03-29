@@ -36,7 +36,7 @@ Promise.all(builds).then(results => {
     console.log('Watching for changes')
   } else {
     for (const result of results) {
-      report(result)
+      report(null, result)
     }
   }
 }).catch(error => {
