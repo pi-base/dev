@@ -16,19 +16,13 @@ Shared developer tools for [π-Base packages](https://github.com/pi-base?q=&type
 
 ```bash
 $ npm install --save-dev @pi-base/dev
+$ npm set-script prepare "pi-base-dev prepare"
+$ npm run prepare
 ```
-
-`pi-base-dev` does not entirely encapsulate `husky`. You will probably also want to
-
-```bash
-$ npm set-script prepare "husky install" && npm run prepare
-```
-
-See [`husky`'s documentation](https://typicode.github.io/husky/#/) for more details.
 
 ## Configuration
 
-`@pi-base/dev` exports a number of common config files
+`@pi-base/dev` exports a number of common base configurations
 
 ```javascript
 // .eslintrc.js
