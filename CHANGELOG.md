@@ -1,5 +1,9 @@
 # Change Log
 
+## [v0.0.7](https://github.com/pi-base/dev/compare/v0.0.6...v0.0.7)
+
+- Fix CLI command names
+
 ## [v0.0.6](https://github.com/pi-base/dev/compare/v0.0.5...v0.0.6)
 
 - Expand supported CLI command set
