@@ -10,9 +10,7 @@ const js = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'plugin:prettier/recommended'
   ],
   rules: {
     "jest/no-focused-tests": "error",
@@ -23,6 +21,31 @@ const js = {
   },
 }
 
+const ts = {
+  ...js,
+  files: ["**/*.ts", "**/*.tsx"],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json'
+  },
+  plugins: [...js.plugins, '@typescript-eslint'],
+  extends: [
+    ...js.extends,
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+  ]
+}
+
+const tsTest = {
+  ...ts,
+  files: ["**/*.test.ts", "**/*.test.tsx"],
+  rules: {
+    ...ts.rules,
+    // Allow test matches to fail and cause an error in the test
+    '@typescript-eslint/no-non-null-assertion': 'off',
+  }
+}
+
 module.exports = {
   ...js,
   ignorePatterns: ['*.d.ts'],
@@ -30,17 +53,5 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
   ],
-  overrides: [{
-    files: ["**/*.ts", "**/*.tsx"],
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-      project: './tsconfig.json'
-    },
-    plugins: [...js.plugins, '@typescript-eslint'],
-    extends: [
-      ...js.extends,
-      'plugin:@typescript-eslint/recommended',
-      'plugin:@typescript-eslint/recommended-requiring-type-checking'
-    ]
-  }]
+  overrides: [ts, tsTest]
 }
