@@ -50,7 +50,10 @@ It also includes a CLI wrapping several common tasks, intended for use as `npm r
     "fmt": "pi-base-dev fmt",
     "fmt:check": "pi-base-dev fmt:check",
     "lint": "pi-base-dev lint",
-    "lint:check": "pi-base-dev lint:check"
+    "lint:check": "pi-base-dev lint:check",
+    "test": "pi-base-dev test",
+    "test:cov": "pi-base-dev test:cov",
+    "test:watch": "pi-base-dev test:watch"
   }
 }
 ```

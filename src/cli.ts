@@ -33,17 +33,17 @@ cli
   })
 
 cli
-  .command('lint:prepare')
-  .description('Install lint hooks')
-  .action(() => {
-    npx('husky', 'install')
-  })
-
-cli
   .command('lint:check')
   .description('Run linter')
   .action(() => {
     npx('eslint', 'src/**/*.ts', '*.js')
+  })
+
+cli
+  .command('prepare')
+  .description('Initial package preparation')
+  .action(() => {
+    npx('husky', 'install')
   })
 
 cli
@@ -61,7 +61,7 @@ cli
   })
 
 cli
-  .command('test:cov')
+  .command('test:watch')
   .description('Run tests in watch mode')
   .action(() => {
     npx('jest', '--watchAll')
