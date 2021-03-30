@@ -1,6 +1,6 @@
 {
   "name": "@pi-base/dev",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Developer utilities for pi-base packages",
   "keywords": [
     "Node"
