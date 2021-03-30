@@ -41,7 +41,7 @@ module.exports = require('@pi-base/dev').prettierConfig
 
 It also includes a CLI wrapping several common tasks, intended for use as `npm run` scripts
 
-```json5
+```javascript
 // package.json
 {
   "scripts": {
@@ -71,3 +71,5 @@ $ npm install
 ## Release
 
 Releases to [NPM](https://www.npmjs.com/package/@pi-base/dev) are automatically triggered by creating a [Github release](https://github.com/pi-base/dev/releases) named `vX.X.X` (matching the current version in `package.json`).
+
+Be sure to add a [`CHANGELOG`](./CHANGELOG.md) entry when updating the version.
