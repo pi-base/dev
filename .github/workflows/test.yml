@@ -2,7 +2,7 @@ name: Test
 on:
   push:
     branches:
-      - "*"
+      - '*'
 
 jobs:
   lint:
@@ -15,6 +15,15 @@ jobs:
         run: npm run lint:check
       - name: Formatting
         run: npm run fmt:check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+      - name: Test
+        run: npm run test
 
   build:
     runs-on: ubuntu-latest
