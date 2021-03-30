@@ -26,6 +26,13 @@ cli
   })
 
 cli
+  .command('lint-staged')
+  .description('Run linter on staged files')
+  .action(() => {
+    npx('lint-staged')
+  })
+
+cli
   .command('lint:check')
   .description('Run linter')
   .action(() => {
