@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+Object {
+  "env": Object {
+    "es6": true,
+    "jest/globals": true,
+    "node": true,
+  },
+  "extends": Array [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+  ],
+  "ignorePatterns": Array [
+    "*.d.ts",
+  ],
+  "overrides": Array [
+    Object {
+      "env": Object {
+        "es6": true,
+        "jest/globals": true,
+        "node": true,
+      },
+      "extends": Array [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
+      "files": Array [
+        "**/*.ts",
+        "**/*.tsx",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "project": "./tsconfig.json",
+      },
+      "plugins": Array [
+        "jest",
+        "prettier",
+        "@typescript-eslint",
+      ],
+      "rules": Object {
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "prettier/prettier": "error",
+      },
+    },
+    Object {
+      "env": Object {
+        "es6": true,
+        "jest/globals": true,
+        "node": true,
+      },
+      "extends": Array [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
+      "files": Array [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "project": "./tsconfig.json",
+      },
+      "plugins": Array [
+        "jest",
+        "prettier",
+        "@typescript-eslint",
+      ],
+      "rules": Object {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "prettier/prettier": "error",
+      },
+    },
+  ],
+  "plugins": Array [
+    "jest",
+    "prettier",
+  ],
+  "rules": Object {
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "prettier/prettier": "error",
+  },
+}
+`;
