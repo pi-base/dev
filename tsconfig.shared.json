@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "es2015",
-    "rootDir": "./src",
-    "outFile": "./dist/main.d.ts",
+    "target": "esnext",
+    "rootDir": "src",
+    "outDir": "dist",
     "moduleResolution": "node",
     "declaration": true,
     "esModuleInterop": true,
@@ -11,13 +11,8 @@
     "strict": true,
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/*.ts"],
+  "exclude": ["node_modules"]
 }
